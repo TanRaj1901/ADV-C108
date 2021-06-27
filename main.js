@@ -43,19 +43,19 @@ function gotresult(error,results) {
     } 
     else{
         console.log(results);
-        document.getElementById("result_emotion_name").innerHTML = results[1].label;
-        prediction = results[1].label;
+        document.getElementById("result_emotion_name").innerHTML = results[0].label;
+        prediction = results[0].label;
         speak();
-        if(results[1].label == "Thumbs Up"){
+        if(results[0].label == "Thumbs Up"){
             document.getElementById("update_emoji").innerHTML = "&#128077;";
         }
-        if(results[1].label == "Thumbs Down"){
+        if(results[0].label == "Thumbs Down"){
             document.getElementById("update_emoji").innerHTML = "&#128078;";
         }
-        if(results[1].label == "Victory"){
+        if(results[0].label == "Victory"){
             document.getElementById("update_emoji").innerHTML = "&#9996;";
         }
-        if(results[1].label == "Wonderful"){
+        if(results[0].label == "Wonderful"){
             document.getElementById("update_emoji").innerHTML = "&#128076;";
         }
     }
